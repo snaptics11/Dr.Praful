@@ -585,7 +585,7 @@ footer h5 {
 }
 @media (max-width: 768px) {
     .hero-section {
-        background: url('https://img.freepik.com/premium-vector/abstract-medical-background-with-icons-symbols-template-with-concept-idea-healthcare-technology-innovation-medicine-health-science-research_120542-571.jpg?w=2000') center/cover no-repeat;
+        background: url(./images/servicebg.avif) center/cover no-repeat;
     }
 
     .container.my-5 p{
