@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Praful Orthopedic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .hero-section {
+            background: url('https://img.freepik.com/premium-vector/abstract-medical-background-with-icons-symbols-template-with-concept-idea-healthcare-technology-innovation-medicine-health-science-research_120542-571.jpg?w=2000') center/cover no-repeat;
+            color: rgb(1, 1, 1);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1{
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+    /* General Styles */
+    .container-lg {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #294798;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        color: #555;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .features-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .feature-item {
+        background: #294798;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #294798;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .services-list li {
+        background: #f8f9fa;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #294798;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3sease, box-shadow 0.3sease;
+    list-style: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .service-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .step-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #294798;
+        margin-bottom: 10px;
+    }
+
+    .step-description {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .subheading {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #294798;
+        margin-block: 15px;
+    }
+
+    .content {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .recommendation-list,
+    .benefits-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .recommendation-item,
+    .benefit-item {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+   /* Unique Class Names for Timeline */
+   .methodology-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .methodology-step {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .methodology-step::before {
+            content: "";
+            position: absolute;
+            left: 3%;
+            top: 10px;
+            width: 4px;
+            height: 100%;
+            background-color: #294798;
+            transform: translateX(-50%);
+        }
+
+        .methodology-icon {
+            width: 50px;
+            height: 50px;
+            background: #294798;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            position: relative;
+            z-index: 1;
+            margin-right: 20px;
+        }
+
+        .methodology-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+            top: 10px;
+        }
+
+        .methodology-content h5 {
+            font-weight: bold;
+            color: #294798;
+            margin-bottom: 10px;
+        }
+        .service-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .service-box h4 {
+            font-weight: 600;
+        }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .features-list {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .services-list {
+            grid-template-columns: 1fr;
+        }
+
+        .methodology-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .methodology-step::before {
+                left: 50%;
+                height: calc(100% - 50px);
+            }
+
+            .methodology-icon {
+                margin: 0 auto 15px;
+            }
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-lg px-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/logo.png" alt="Dr. Praful Orthopedic" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item "><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="robotic-knee-replacement.html">Robotic Knee Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="knee-replacement.html">Knee Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="Hip-replacement-surgery.html">Hip Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="acl-reconstruction-surgery.html">ACL Reconstruction Surgery</a></li>
+                            <li><a class="dropdown-item" href="foot-and-ankle-surgery.html">Foot And Ankle Surgery</a></li>
+                            <li><a class="dropdown-item" href="revision-knee-replacement-surgery.html">Knee Revision Surgery</a></li>
+                            <li><a class="dropdown-item" href="redo-fixation-fractures.html">Revision Or Redo Fixations For Fractures</a></li>
+                            <li><a class="dropdown-item" href="complex-fractures.html">Complex Fractures</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a style="border-radius: 30px;" class="btn btn-primary" href="tel:9492617280">9492617280</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Knee Replacement Surgery</h1>
+            <p class="description">
+                One of the best Knee Replacement Surgery in Hyderabad with top-notch Knee Replacement Surgery services. Book
+                an appointment and visit our clinic now for 100% safe and affordable orthopedic surgeries by Dr. Praful.
+            </p>
+        </div>
+    </section>
+   <div class="container-lg">
+    <section class="main-content">
+        <section class="container-lg my-5">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-4"></i>
+                        <h4>100% Safe & Secure</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-tags fa-3x text-primary mb-4"></i>
+                        <h4>Affordable Price</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-user-md fa-3x text-primary mb-4"></i>
+                        <h4>Expert Orthopedic Doctor</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <h2 class="section-heading">Services</h2>
+        <ul class="services-list">
+            <li>Knee Replacement Surgery</li>
+            <li>Hip Replacement Surgery</li>
+            <li>ACL Reconstruction Surgery</li>
+            <li>Foot and Ankle Surgery</li>
+            <li>Knee Revision Surgery</li>
+            <li>Revision Or Redo Fixations For Fractures</li>
+            <li>Complex Fractures</li>
+        </ul>
+        <div class="container my-5">
+            <h2 class="text-center mb-4"><b>Our Methodology</b> </h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="methodology-timeline">
+    
+                        <div class="methodology-step">
+                            <div class="methodology-icon"><i class="fas fa-user-md"></i></div>
+                            <div class="methodology-content">
+                                <h5>Consultation</h5>
+                                <p>Book your appointment through WhatsApp or by dialing up @Mobile Number.</p>
+                            </div>
+                        </div>
+    
+                        <div class="methodology-step">
+                            <div class="methodology-icon"><i class="fas fa-stethoscope"></i></div>
+                            <div class="methodology-content">
+                                <h5>Investigation</h5>
+                                <p>The doctor inspects your issue extensively to completely understand the cause and the
+                                    issues associated with your ailment.</p>
+                            </div>
+                        </div>
+    
+                        <div class="methodology-step">
+                            <div class="methodology-icon"><i class="fas fa-file-medical"></i></div>
+                            <div class="methodology-content">
+                                <h5>Treatment Plan</h5>
+                                <p>A detailed treatment plan is created based on your unique needs and requirements.</p>
+                            </div>
+                        </div>
+    
+                        <div class="methodology-step">
+                            <div class="methodology-icon"><i class="fas fa-procedures"></i></div>
+                            <div class="methodology-content">
+                                <h5>Treatment</h5>
+                                <p>With each treatment that you undergo, you are advancing towards recovery.</p>
+                            </div>
+                        </div>
+    
+                        <div class="methodology-step">
+                            <div class="methodology-icon"><i class="fas fa-user-check"></i></div>
+                            <div class="methodology-content">
+                                <h5>Post-treatment follow-up</h5>
+                                <p>Our team follows up to keep track of your recovery progress.</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+        <h2 class="section-heading py-3">Best Hospital for Knee Replacement Surgery</h2>
+    
+        <h3 class="subheading">What is Knee Replacement Surgery?</h3>
+        <p class="content">
+            Knee replacement surgery, also known as “total knee replacement surgery” or “knee arthroplasty,” is a
+            surgical procedure that removes the heavy surfaces of the knee joint to relieve pain and disability.
+        </p>
+        <p class="content">
+            Anyone with severe arthritis or a knee injury may benefit from this surgery performed by the best knee
+            replacement surgeon in Hyderabad.
+        </p>
+    
+        <h3 class="subheading">How does arthritis affect the knee joint?</h3>
+        <p class="content">
+            There are various types of arthritis that may affect the knee joint. Osteoarthritis is a degenerative joint
+            disease that usually affects middle-aged and older adults. It can cause the breakdown of joint cartilage and
+            adjacent bone in the knees. Rheumatoid arthritis can cause inflammation of the synovial membrane and result
+            in excessive synovial fluid, leading to pain and stiffness. Traumatic arthritis may cause damage to the knee
+            cartilage due to injury.
+        </p>
+    
+        <h3 class="subheading">Common reasons for the knee replacement procedure</h3>
+        <p class="content">
+            Knee replacement surgery is a treatment for knee pain and disability. The most common condition that results
+            in the need for knee replacement surgery is osteoarthritis.
+        </p>
+        <p class="content">
+            People with severe degenerative joint disease such as osteoarthritis may be unable to perform regular tasks
+            that require knee bending, such as walking or climbing stairs, because they are painful. The knee may swell
+            seeing that the joint is not stable.
+        </p>
+        <p class="content">
+            Other types of arthritis, such as rheumatoid arthritis and arthritis caused by a knee injury, may also lead
+            to knee joint degeneration. Furthermore, fractures, damaged cartilage, and/or torn ligaments might result in
+            an irreversible knee joint injury.
+        </p>
+    
+        <h3 class="subheading">When is it recommended?</h3>
+        <p class="content">
+            Knee arthroplasty, often known as knee replacement, enhances a patient’s daily activities by relieving pain
+            and discomfort. Everyone who has decided on knee replacement has the same question: when is the best time to
+            have it done or when is it recommended?
+        </p>
+        <p class="content">
+            Moreover, knee replacement surgery is recommended owing to several factors, including:
+        </p>
+        <ul class="recommendation-list">
+            <li class="recommendation-item">Stiff knees</li>
+            <li class="recommendation-item">Excessive swelling in the knees</li>
+            <li class="recommendation-item">Experiencing pain while walking, moving, or performing any physical movements</li>
+            <li class="recommendation-item">Extremely damaged knee joints or bones</li>
+        </ul>
+        <p class="content">
+            Before recommending a knee replacement surgery, orthopedic doctors always prefer a thorough conversation with
+            the patient.
+        </p>
+        <p class="content">
+            The correct timing is one of the most important factors determining the success of knee replacement surgery.
+            It indicates that having surgery at the right time benefits the patient the most.
+        </p>
+    
+        <h3 class="subheading">Benefits of knee replacement surgery</h3>
+        <p class="content">
+            Knee replacement surgery can benefit a patient in several ways, such as:
+        </p>
+        <ul class="benefits-list">
+            <li class="benefit-item">
+                One of the major complaints with knee osteoarthritis is severe pain. Knee surgery can provide relief
+                from chronic knee pain.
+            </li>
+            <li class="benefit-item">
+                Knee surgery benefits you by reducing joint pain and stiffness, allowing you to go about your daily
+                activities without pain.
+            </li>
+            <li class="benefit-item">
+                Knee surgery decreases the requirement for long-term medicine, particularly opioid pain relievers and
+                steroids. Long-term use of such medications can lead to a variety of complications.
+            </li>
+        </ul>
+        <p class="content">
+            There is no correct age at which one may need knee replacement surgery. After reviewing your symptoms and
+            joint condition, an orthopedic surgeon may recommend knee replacement surgery. A knee replacement at the
+            correct time may protect you from any future complications.
+        </p>
+    </section>
+   </div>
+    
+
+
+    <div class="container my-5">
+        <h2 class="mb-4 fw-bold">Frequently Asked Questions</h2>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        When is it recommended?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Stiff knees</li>
+                            <li>Excessive swelling in the knees</li>
+                            <li>Experiencing pain while walking, moving, or performing any physical movements</li>
+                            <li>Extremely damaged knee joints or bones</li>
+                            <li>Unaffected by medications or therapies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How long does the service take?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>The procedure takes 1 to 3 hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How long does the recovery take?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>It will take up to 5-6 weeks to resume usual activity and 3-4 months to recover fully from
+                            the knee replacement surgery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <!-- Left Section -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid mb-3 bg-white footer-Logo ">
+                    <p class="mt-3">Dr Kilaru Praful, one of the top Orthopedic Surgeons in Hyderabad, is working as a
+                        Consultant Orthopedic and Trauma Surgeon at Citizens Specialty Hospital, Hyderabad.</p>
+                </div>
+                <!-- Middle Section -->
+                <div class="col-md-3 text-center text-md-start mb-4 mb-md-0 addressSection">
+                    <h5 class="fw-bold">Our Address</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Nallagandla, Hyderabad</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 810 699 0009</p>
+                    <p><i class="fa-solid fa-envelope"></i> anymail@mail.com</p>
+                    <p><i class="fa-solid fa-clock"></i> 09:00 - 17:00</p>
+                </div>
+                <!-- Right Section -->
+                <div class="col-md-2 text-center text-md-start">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="social-icons d-flex justify-content-center justify-content-md-start">
+                        <a target="_blank" href="https://www.facebook.com/people/Dr-Praful-Kilaru/100084851658438/"><i class="fa-brands fa-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/DrPraful11"><i class="fa-brands fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/dr_praful_official/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+    <div class="py-3 text-center copyrights" style="background-color: #000;">
+        <p class="text-white">Designed by <a target="_blank"  href="https://snaptics.agency/">Snaptics</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- time line section ends here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

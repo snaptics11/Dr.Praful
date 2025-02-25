@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Praful Orthopedic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .hero-section {
+            background: url('https://img.freepik.com/premium-vector/abstract-medical-background-with-icons-symbols-template-with-concept-idea-healthcare-technology-innovation-medicine-health-science-research_120542-571.jpg?w=2000') center/cover no-repeat;
+            color: rgb(1, 1, 1);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #294798;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+        }
+
+        .service-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section {
+            background-color: #294798;
+            color: white;
+            padding: 50px;
+        }
+
+        .faq-section h2 {
+            margin-bottom: 30px;
+        }
+
+        /* Unique Class Names for Timeline */
+        .methodology-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .methodology-step {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .methodology-step::before {
+            content: "";
+            position: absolute;
+            left: 3%;
+            top: 10px;
+            width: 4px;
+            height: 100%;
+            background-color: #294798;
+            transform: translateX(-50%);
+        }
+
+        .methodology-icon {
+            width: 50px;
+            height: 50px;
+            background: #294798;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            position: relative;
+            z-index: 1;
+            margin-right: 20px;
+        }
+
+        .methodology-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+            top: 10px;
+        }
+
+        .methodology-content h5 {
+            font-weight: bold;
+            color: #294798;
+            margin-bottom: 10px;
+        }
+
+        .service-box h4 {
+            font-weight: 600;
+        }
+        .sectionImages img{
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+        }
+        .subheading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #294798;
+    margin-block: 15px;
+}
+
+        @media (max-width: 768px) {
+            .methodology-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .methodology-step::before {
+                left: 50%;
+                height: calc(100% - 50px);
+            }
+
+            .methodology-icon {
+                margin: 0 auto 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-lg px-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/logo.png" alt="Dr. Praful Orthopedic" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item "><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="robotic-knee-replacement.html">Robotic Knee Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="knee-replacement.html">Knee Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="Hip-replacement-surgery.html">Hip Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="acl-reconstruction-surgery.html">ACL Reconstruction Surgery</a></li>
+                            <li><a class="dropdown-item" href="foot-and-ankle-surgery.html">Foot And Ankle Surgery</a></li>
+                            <li><a class="dropdown-item" href="revision-knee-replacement-surgery.html">Knee Revision Surgery</a></li>
+                            <li><a class="dropdown-item" href="redo-fixation-fractures.html">Revision Or Redo Fixations For Fractures</a></li>
+                            <li><a class="dropdown-item" href="complex-fractures.html">Complex Fractures</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a style="border-radius: 30px;" class="btn btn-primary" href="tel:9492617280">9492617280</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Knee Revision Surgery</h1>
+
+        </div>
+    </section>
+    <div class="sectionImages mt-5">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/images/revision.jpg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/rivision2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="container-lg my-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-4"></i>
+                    <h4>100% Safe & Secure</h4>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="fas fa-tags fa-3x text-primary mb-4"></i>
+                    <h4>Affordable Price</h4>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="fas fa-user-md fa-3x text-primary mb-4"></i>
+                    <h4>Expert Orthopedic Doctor</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4"><b>Our Methodology</b> </h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="methodology-timeline">
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-user-md"></i></div>
+                        <div class="methodology-content">
+                            <h5>Consultation</h5>
+                            <p>Book your appointment through WhatsApp or by dialing up @Mobile Number.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-stethoscope"></i></div>
+                        <div class="methodology-content">
+                            <h5>Investigation</h5>
+                            <p>The doctor inspects your issue extensively to completely understand the cause and the
+                                issues associated with your ailment.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-file-medical"></i></div>
+                        <div class="methodology-content">
+                            <h5>Treatment Plan</h5>
+                            <p>A detailed treatment plan is created based on your unique needs and requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-procedures"></i></div>
+                        <div class="methodology-content">
+                            <h5>Treatment</h5>
+                            <p>With each treatment that you undergo, you are advancing towards recovery.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-user-check"></i></div>
+                        <div class="methodology-content">
+                            <h5>Post-treatment follow-up</h5>
+                            <p>Our team follows up to keep track of your recovery progress.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Knee Revision Surgery Information Section -->
+        <div class="container my-5">
+            <h2 class="text-center mb-4"><b>Knee Revision Surgery</b></h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="mb-5">
+                        <h4 class="subheading">What is Knee Revision Surgery?</h4>
+                        <p>When a knee replacement no longer functions properly, revision surgery after total knee replacement is often necessary. During this procedure, a surgeon replaces the old device with a new one. Revision surgery should not be taken lightly. It’s more complicated than a primary (or first) Total Knee Replacement Surgery and continues to carry many of the same risks.</p>
+                    </div>
+    
+                    <div class="mb-5">
+                        <h4 class="subheading">Symptoms of Knee Revision Surgery</h4>
+                        <p>You will experience specific symptoms if Knee Replacement Revision Surgery is required. Excessive wear or failure symptoms include:</p>
+                        <ul>
+                            <li>Decreased knee stability or function</li>
+                            <li>Increased pain or infection</li>
+                            <li>A bone fracture or a complete device failure</li>
+                        </ul>
+                        <p>In other situations, small fragments of the prosthetic device may break off and gather near the joint.</p>
+                    </div>
+    
+                    <div class="mb-5">
+                        <h4 class="subheading">When is Knee Revision Surgery recommended?</h4>
+                        <p>Infection after Knee Replacement Surgery can result in serious complications. Typically, bacteria that gather near the wound or inside the device are the reason for this. If your surgeon suspects there may be an issue with your present artificial knee, you will be required to submit to an examination and assessment. However, the following are the typical justifications for having a second Knee Replacement Surgery:</p>
+                        <ul>
+                            <li>Joint rigidity</li>
+                            <li>Non-healing wounds (sutures)</li>
+                            <li>Joint instability resulting in injuries</li>
+                            <li>Joint movements that hurt</li>
+                            <li>Inability to walk independently</li>
+                            <li>Discharging sinuses</li>
+                        </ul>
+                    </div>
+    
+                    <div class="mb-5">
+                        <h4 class="subheading">Why Knee Revision Surgery is more complicated than initial surgery</h4>
+                        <p>A revision procedure is typically more challenging and complex than the primary Knee Replacement Surgery because the surgeon must eliminate the original implant, which would have been embraced into the existing bone.</p>
+                        <p>Additionally, less bone is left over after the surgeon removes the prosthesis. In some instances, a bone graft may be necessary to support the new prosthesis. This procedure involves transplanting a piece of bone from another part of the body or from a donor. A bone graft provides support and promotes the growth of new bone.</p>
+                        <p>However, more preoperative planning, specialised equipment, and advanced surgical techniques are needed for the procedure. Compared to a primary, initial knee replacement, the procedure requires more time to complete.</p>
+                    </div>
+    
+                    <div class="mb-5">
+                        <h4 class="subheading">How long is the recovery time?</h4>
+                        <p>The recovery period following Knee Revision Surgery is not as predetermined as it is after primary knee replacement and can differ greatly from patient to patient. It may take up to 12 months to feel completely better.</p>
+                        <p>The recovery period usually takes up to 3 months or even more, depending on the patient’s condition. Most people will feel at ease going back to work and resuming some of their normal activities three to six months after surgery. However, this may not involve exercise or other physically demanding activities.</p>
+                    </div>
+    
+                    <div class="mb-5">
+                        <h4 class="subheading">What risks are associated with Knee Revision Surgery?</h4>
+                        <p>The lengthened recovery time associated with a Knee Revision Surgery raises the possibility of complications.</p>
+                        <p>Complications after Knee Revision Surgery may include:</p>
+                        <ul>
+                            <li>Infection</li>
+                            <li>Clots of blood</li>
+                            <li>Dislocation or damage</li>
+                            <li>Joint stiffness and mobility issues</li>
+                            <li>General health risks</li>
+                        </ul>
+                        <p>Your orthopaedic surgeon will go through all the risks in detail to map out the best course of action. They will also give you instructions on how to get ready for surgery to reduce your risks as much as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container my-5">
+        <h2 class="mb-4 fw-bold">Frequently Asked Questions</h2>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        When is it recommended?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Stiff knees</li>
+                            <li>Excessive swelling in the knees</li>
+                            <li>Experiencing pain while walking, moving, or performing any physical movements</li>
+                            <li>Extremely damaged knee joints or bones</li>
+                            <li>Unaffected by medications or therapies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How long does the service take?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>The procedure takes 1 to 3 hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How long does the recovery take?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>It will take up to 5-6 weeks to resume usual activity and 3-4 months to recover fully from
+                            the knee replacement surgery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <!-- Left Section -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid mb-3 bg-white footer-Logo ">
+                    <p class="mt-3">Dr Kilaru Praful, one of the top Orthopedic Surgeons in Hyderabad, is working as a
+                        Consultant Orthopedic and Trauma Surgeon at Citizens Specialty Hospital, Hyderabad.</p>
+                </div>
+                <!-- Middle Section -->
+                <div class="col-md-3 text-center text-md-start mb-4 mb-md-0 addressSection">
+                    <h5 class="fw-bold">Our Address</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Nallagandla, Hyderabad</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 810 699 0009</p>
+                    <p><i class="fa-solid fa-envelope"></i> anymail@mail.com</p>
+                    <p><i class="fa-solid fa-clock"></i> 09:00 - 17:00</p>
+                </div>
+                <!-- Right Section -->
+                <div class="col-md-2 text-center text-md-start">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="social-icons d-flex justify-content-center justify-content-md-start">
+                        <a target="_blank" href="https://www.facebook.com/people/Dr-Praful-Kilaru/100084851658438/"><i class="fa-brands fa-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/DrPraful11"><i class="fa-brands fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/dr_praful_official/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+    <div class="py-3 text-center copyrights" style="background-color: #000;">
+        <p class="text-white">Designed by <a target="_blank"  href="https://snaptics.agency/">Snaptics</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- time line section ends here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

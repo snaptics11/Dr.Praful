@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Praful Orthopedic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .hero-section {
+            background: url('https://img.freepik.com/premium-vector/abstract-medical-background-with-icons-symbols-template-with-concept-idea-healthcare-technology-innovation-medicine-health-science-research_120542-571.jpg?w=2000') center/cover no-repeat;
+            color: rgb(1, 1, 1);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #294798;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+        }
+
+        .service-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section {
+            background-color: #294798;
+            color: white;
+            padding: 50px;
+        }
+
+        .faq-section h2 {
+            margin-bottom: 30px;
+        }
+
+        /* Unique Class Names for Timeline */
+        .methodology-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .methodology-step {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .methodology-step::before {
+            content: "";
+            position: absolute;
+            left: 3%;
+            top: 10px;
+            width: 4px;
+            height: 100%;
+            background-color: #294798;
+            transform: translateX(-50%);
+        }
+
+        .methodology-icon {
+            width: 50px;
+            height: 50px;
+            background: #294798;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            position: relative;
+            z-index: 1;
+            margin-right: 20px;
+        }
+
+        .methodology-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+            top: 10px;
+        }
+
+        .methodology-content h5 {
+            font-weight: bold;
+            color: #294798;
+            margin-bottom: 10px;
+        }
+
+        .service-box h4 {
+            font-weight: 600;
+        }
+
+        .sectionImages img {
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .ComplexFractures h4 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #294798;
+            margin-block: 15px;
+        }
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .services-list li {
+            background: #f8f9fa;
+            padding: 20px 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #294798;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3sease, box-shadow 0.3sease;
+            list-style: none;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+
+            .methodology-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .methodology-step::before {
+                left: 50%;
+                height: calc(100% - 50px);
+            }
+
+            .methodology-icon {
+                margin: 0 auto 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-lg px-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/logo.png" alt="Dr. Praful Orthopedic" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item "><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="robotic-knee-replacement.html">Robotic Knee Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="knee-replacement.html">Knee Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="Hip-replacement-surgery.html">Hip Replacement Surgery</a></li>
+                            <li><a class="dropdown-item" href="acl-reconstruction-surgery.html">ACL Reconstruction Surgery</a></li>
+                            <li><a class="dropdown-item" href="foot-and-ankle-surgery.html">Foot And Ankle Surgery</a></li>
+                            <li><a class="dropdown-item" href="revision-knee-replacement-surgery.html">Knee Revision Surgery</a></li>
+                            <li><a class="dropdown-item" href="redo-fixation-fractures.html">Revision Or Redo Fixations For Fractures</a></li>
+                            <li><a class="dropdown-item" href="complex-fractures.html">Complex Fractures</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a style="border-radius: 30px;" class="btn btn-primary" href="tel:9492617280">9492617280</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>ComplexFractures</h1>
+        </div>
+    </section>
+    <!-- <div class="sectionImages mt-5">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/images/acl-surgery1.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/acl-surgery2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <section class="container-lg my-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-4"></i>
+                    <h4>100% Safe & Secure</h4>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="fas fa-tags fa-3x text-primary mb-4"></i>
+                    <h4>Affordable Price</h4>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box">
+                    <i class="fas fa-user-md fa-3x text-primary mb-4"></i>
+                    <h4>Expert Orthopedic Doctor</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4"><b>Our Methodology</b> </h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="methodology-timeline">
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-user-md"></i></div>
+                        <div class="methodology-content">
+                            <h5>Consultation</h5>
+                            <p>Book your appointment through WhatsApp or by dialing up @Mobile Number.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-stethoscope"></i></div>
+                        <div class="methodology-content">
+                            <h5>Investigation</h5>
+                            <p>The doctor inspects your issue extensively to completely understand the cause and the
+                                issues associated with your ailment.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-file-medical"></i></div>
+                        <div class="methodology-content">
+                            <h5>Treatment Plan</h5>
+                            <p>A detailed treatment plan is created based on your unique needs and requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-procedures"></i></div>
+                        <div class="methodology-content">
+                            <h5>Treatment</h5>
+                            <p>With each treatment that you undergo, you are advancing towards recovery.</p>
+                        </div>
+                    </div>
+
+                    <div class="methodology-step">
+                        <div class="methodology-icon"><i class="fas fa-user-check"></i></div>
+                        <div class="methodology-content">
+                            <h5>Post-treatment follow-up</h5>
+                            <p>Our team follows up to keep track of your recovery progress.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Complex Fractures Information Section -->
+<div class="container my-5  ComplexFractures">
+    <h2 class="text-center mb-4"><b>Complex Fractures</b></h2>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="mb-5">
+                <h4>What are Complex Fractures?</h4>
+                <p>Complex Fractures include broken bones that result in significant joint damage, multiple broken bones, bone breakage that results in the loss of native bone, and fractures that harm the tissues that surround the skin, muscle, nerves, and blood vessels.</p>
+            </div>
+
+            <div class="mb-5">
+                <h4>Who will develop Complex Fractures?</h4>
+                <p>A complex fracture occurs when a bone is broken into several pieces and the soft tissues in the area are severely harmed. Athletes and the elderly are more prone to these fractures. While a complex fracture can occur anywhere on the body and to anyone, women in their sixties are five times more likely than men to experience one in their wrists.</p>
+                <p>A child who sustains a complex fracture will require specialised care to ensure that the break won’t affect their bone growth. Since children’s bodies are still developing, injuries to them can be much more serious than those to adults.</p>
+            </div>
+
+            <div class="mb-5">
+                <h4>When is surgery for Complex Fractures recommended?</h4>
+                <p>Complex Fractures are unique for every patient, but surgery will be necessary in many cases. Depending on where the injury occurred, the surgeon can treat the complex fracture in a variety of ways.</p>
+                <p>Based on the severity of the fracture and its location in the body, your physician will create a customised treatment plan to help you heal as quickly as possible. Your surgeon will use screws and pins to stabilise the various bone fragments, torn ligaments, and torn tendons that are present in a complex fracture.</p>
+                <p>The following factors are responsible for Complex Fractures:</p>
+                <ul>
+                    <li>High-speed injuries (Road traffic accidents)</li>
+                    <li>Fall from height (High-rise buildings and construction sites)</li>
+                    <li>Brutal assault</li>
+                    <li>Long-lasting joint dislocation</li>
+                    <li>Multiple fractures to the same bone</li>
+                    <li>Experiencing severe bone loss</li>
+                    <li>Bone is slowly fragmenting or breaking down</li>
+                    <li>Severe tissue damage</li>
+                    <li>Cartilage damage</li>
+                </ul>
+            </div>
+
+            <div class="mb-5">
+                <h4>How long does the recovery from Complex Fractures take?</h4>
+                <p>If you are going through a complex fracture, you know how painful the injury is. Even though recovering from a complex fracture may not be easy, with a little patience and an experienced doctor, you’ll be feeling better in no time.</p>
+                <p>Understanding the recovery time following a complex fracture will help you prepare for the lengthy healing process. The condition, the severity of the state, and the treatment can all influence recovery. The recovery process from the complex fracture surgery can take up to several months.</p>
+            </div>
+
+            <div class="mb-5">
+                <h4>What is the rehabilitation procedure for Complex Fractures?</h4>
+                <p>You will require rehabilitation to fully regain your range of motion in the injured area once the injury has healed. Based on the nature and location of the injury, your doctor will create a customised rehabilitation plan. This programme will help the muscles become more flexible and strong by using gentle stretches, different exercises, and other physical therapy techniques.</p>
+                <p>Patients recover at different rates, but if all goes well, the fracture should be fully healed in about two months.</p>
+                <p>It’s important to seek medical attention immediately if you think you may have suffered a complex fracture. Your doctor will conduct a number of physical examinations and may also decide to order an MRI to better identify and treat the injury.</p>
+            </div>
+        </div>
+    </div>
+    <h2 class="subheading fw-bold">FAQs</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        When is it recommended?
+
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>High-Velocity Injuries(Road Traffic accidents)</li>
+                            <li>Fall from Height( High Rise buildings/Construction sites)</li>
+                            <li>Physical Assault</li>
+                            <li>Prolonged joint dislocation</li>
+                            <li>Multiple fractures to the same bone</li>
+                            <li>Experiencing severe bone loss</li>
+                            <li>Bone is slowly fragmenting or breaking down</li>
+                            <li>Severe tissue damage</li>
+                            <li>Cartilage damage </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How long does the service take?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>It takes several hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How long does the recovery take?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>The recovery depends on the condition, the severity of the state, and the treatment. It can take up to months to recover from the complex fracture surgery. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+    <footer class="footer">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <!-- Left Section -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid mb-3 bg-white footer-Logo ">
+                    <p class="mt-3">Dr Kilaru Praful, one of the top Orthopedic Surgeons in Hyderabad, is working as a
+                        Consultant Orthopedic and Trauma Surgeon at Citizens Specialty Hospital, Hyderabad.</p>
+                </div>
+                <!-- Middle Section -->
+                <div class="col-md-3 text-center text-md-start mb-4 mb-md-0 addressSection">
+                    <h5 class="fw-bold">Our Address</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Nallagandla, Hyderabad</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 810 699 0009</p>
+                    <p><i class="fa-solid fa-envelope"></i> anymail@mail.com</p>
+                    <p><i class="fa-solid fa-clock"></i> 09:00 - 17:00</p>
+                </div>
+                <!-- Right Section -->
+                <div class="col-md-2 text-center text-md-start">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="social-icons d-flex justify-content-center justify-content-md-start">
+                        <a target="_blank" href="https://www.facebook.com/people/Dr-Praful-Kilaru/100084851658438/"><i class="fa-brands fa-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/DrPraful11"><i class="fa-brands fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/dr_praful_official/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+    <div class="py-3 text-center copyrights" style="background-color: #000;">
+        <p class="text-white">Designed by <a target="_blank"  href="https://snaptics.agency/">Snaptics</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- time line section ends here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

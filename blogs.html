@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Praful Orthopedic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .overlay {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2766ac;
+            opacity: 0.66;
+            background-image: url(/images/conatact-bg.jpg);
+            background-position: center center;
+            background-size: cover;
+            z-index: -1;
+            background-blend-mode: overlay;
+            /* Add this line */
+        }
+
+        .overlay h2 {
+            font-weight: 600;
+            font-size: 3rem;
+        }
+
+
+        .blog-card {
+            border: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 0px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-style: solid;
+            border-color: #E7DEDEB3;
+            transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            min-height: 670px;
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.02);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 300px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .blog-card-body {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .blog-title {
+            font-weight: bold;
+            color: #1a237e;
+            font-size: 18px;
+        }
+
+        .blog-text {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .blog-btn {
+            background-color: #1a237e;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 25px;
+        }
+
+        .blog-btn:hover {
+            background-color: #0d1b5f;
+        }
+
+        .BlogsPage {
+            width: 65%;
+            margin: auto;
+        }
+        @media screen and (max-width:768px){
+            .blog-card img{
+                height: 100%;
+                width: 100%;
+            }
+            .BlogsPage {
+                width: 90%;
+                margin: auto;
+            }
+            .blog-card{
+                min-height: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body style="    background-color: #f3f1f6;">
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-lg px-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/logo.png" alt="Dr. Praful Orthopedic" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item "><a class="nav-link " href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="robotic-knee-replacement.html">Robotic Knee
+                                        Replacement Surgery</a></li>
+                                <li><a class="dropdown-item" href="knee-replacement.html">Knee Replacement Surgery</a>
+                                </li>
+                                <li><a class="dropdown-item" href="Hip-replacement-surgery.html">Hip Replacement
+                                        Surgery</a></li>
+                                <li><a class="dropdown-item" href="acl-reconstruction-surgery.html">ACL Reconstruction
+                                        Surgery</a></li>
+                                <li><a class="dropdown-item" href="foot-and-ankle-surgery.html">Foot And Ankle
+                                        Surgery</a></li>
+                                <li><a class="dropdown-item" href="revision-knee-replacement-surgery.html">Knee Revision
+                                        Surgery</a></li>
+                                <li><a class="dropdown-item" href="redo-fixation-fractures.html">Revision Or Redo
+                                        Fixations For Fractures</a></li>
+                                <li><a class="dropdown-item" href="complex-fractures.html">Complex Fractures</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="blogs.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <a style="border-radius: 30px;" class="btn btn-primary" href="tel:9492617280">9492617280</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="overlay">
+        <h2>Blogs</h2>
+    </div>
+    <section class="BlogsPage">
+        <div class="container-lg my-5">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="/images/blog1.png" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">Why Revision Knee Replacement Is the Best Solution to Your Pain</h5>
+                            <p class="blog-text">When you are hurt for a long time, you tend to get used to it. You
+                                learn how to manage the pain and live with it. You ignore the pain as much as possible
+                                in your day-to-day activities and focus on other things instead. But that also means
+                                that you will begin taking the pain for granted and take active steps to see what can be
+                                done about it. If getting through the day becomes harder because of knee pain, you might
+                                think about surgical options. </p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://pmrxcontent.com/wp-content/uploads/Total-Knee-Replacement-Revision-Surgery.jpg" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">Revision Knee Replacement - Understanding the Differences Between
+                                Primary and Revision Surgery</h5>
+                            <p class="blog-text">When it comes to knee replacement surgery, not all patients respond the
+                                same way. Some may have a great outcome from their primary knee surgery, but others may
+                                need to undergo revision surgery afterwards due to complications or unanticipated issues
+                                that arose as a result of the procedure.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://www.geetanjalihospital.co.in/img/media/cache/blogs/01/825x408/1010/knee-replacement-surgery-1.jpg" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">6 Important Factors to Consider Before Having a Knee Replacement
+                                Surgery</h5>
+                            <p class="blog-text">Knee replacement surgery cost in hyderabad is very economical. When it
+                                comes to knee pain, many people look at knee replacement surgery as their last resort.
+                                However, despite being a highly invasive procedure requiring general anaesthesia, knee
+                                replacements have become common procedures that help most patients lead an active and
+                                fruitful life again.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://ko-orthopaedic.com.my/wp-content/uploads/2021/04/orthopedic-consultation.jpg" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">5 Reasons to Visit an Orthopedic Doctor if You're Having These
+                                Symptoms</h5>
+                            <p class="blog-text">An orthopedic doctor specializes in diagnosing and treating conditions
+                                associated with the bones, joints, tendons, and the soft tissue that supports them. Dr
+                                Praful, the best orthopedic doctor in hyderabad says that it’s important to see an
+                                orthopedic specialist if you think you might have any of these conditions.In fact, it’s
+                                essential to make an appointment as soon as possible.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://www.footcaremd.org/images/librariesprovider2/article-images/footdroptreatment.jpg?sfvrsn=77c7b6aa_0" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">Discover the Foot and Ankle Specialist's Guide to Hassle-Free
+                                Surgery: Diagnosis, Procedure, and Treatment</h5>
+                            <p class="blog-text">Are you experiencing persistent pain in your feet and ankles? You may
+                                need to consult a foot and ankle specialist to diagnose your condition and determine the
+                                best treatment plan. This guide will help you understand why it’s important to see a
+                                foot and ankle specialist and what to expect during a visit.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://adventpt.com/wp-content/uploads/2020/12/shutterstock_625954397.jpg" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">
+                                Best Orthopedic Doctor
+                                Ready, Set, Go! Your Ultimate Guide to Exercising After Revision Knee Replacement
+                                Surgery</h5>
+                            <p class="blog-text">If you’ve recently undergone revision knee replacement surgery, you may
+                                be wondering how to get back into an exercise routine. Exercise is an important part of
+                                overall health, and it’s important to find activities that are safe and beneficial for
+                                your specific needs. In this guide, we’ll provide you with all the information you need
+                                to get started on the path to recovery.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.gIrWBfjqwFJBlSJnGimkfAHaHJ&pid=Api" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">
+                                Unlocking the Potential of Revision Knee Replacement: How It Enhances Outcomes and
+                                Quality of Life</h5>
+                            <p class="blog-text">Knee replacement surgery is a major procedure that can help restore
+                                mobility, reduce pain, and improve the quality of life for many patients living with
+                                knee issues. But for some, the initial knee replacement surgery may not provide the
+                                desired results, and a follow-up procedure known as revision knee replacement may be
+                                necessary.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://images.squarespace-cdn.com/content/v1/53765ad1e4b095f55e7385e4/1625253352276-YMSDZ5K9RLEIN89SYIML/AdobeStock_85797771.jpeg" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">
+                                Orthopaedic Treatments: A Comprehensive Guide to Enhancing Bone and Joint
+                                Health</h5>
+                            <p class="blog-text">Orthopaedic treatments can help to improve the health of your bones and
+                                joints. From physical therapy to surgery, orthopaedic treatments can help you manage
+                                pain, improve mobility, and enhance your quality of life. This article will provide you
+                                with a comprehensive guide to orthopaedic treatments and how they can help to improve
+                                your bone and joint health.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://bonesandskin.in/wp-content/uploads/2020/01/8-1.png" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">
+                                Navigating Complex Fractures: How the Best Orthopedic Doctor in Hyderabad Can Help</h5>
+                            <p class="blog-text">Fractures are common injuries that can happen to anyone at any time.
+                                While most fractures are straightforward, some can be complex, requiring a higher level
+                                of expertise to diagnose and treat. Complex fractures can be caused by high-energy
+                                traumas or underlying medical conditions, making them more challenging to manage.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-card">
+                        <img src="https://dratacan.com/wp-content/uploads/2023/11/robotik-diz-protezi-ameliyati.jpg" alt="Knee Replacement">
+                        <div class="blog-card-body">
+                            <h5 class="blog-title">
+                                Revolutionise Your Mobility: Discover the Best Knee Replacement Surgeon in Hyderabad for
+                                Robotic Knee Surgery</h5>
+                            <p class="blog-text">Are you someone who has been suffering from knee pain for an extended
+                                period? Does your knee pain make it difficult for you to carry out daily activities? If
+                                so, you may want to consider knee replacement surgery.</p>
+                            <a href="#" class="blog-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <!-- Left Section -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <img src="images/logo.png" alt="Logo" class="img-fluid mb-3 bg-white footer-Logo ">
+                    <p class="mt-3">Dr Kilaru Praful, one of the top Orthopedic Surgeons in Hyderabad, is working as a
+                        Consultant Orthopedic and Trauma Surgeon at Citizens Specialty Hospital, Hyderabad.</p>
+                </div>
+                <!-- Middle Section -->
+                <div class="col-md-3 text-center text-md-start mb-4 mb-md-0 addressSection">
+                    <h5 class="fw-bold">Our Address</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Nallagandla, Hyderabad</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 810 699 0009</p>
+                    <p><i class="fa-solid fa-envelope"></i> anymail@mail.com</p>
+                    <p><i class="fa-solid fa-clock"></i> 09:00 - 17:00</p>
+                </div>
+                <!-- Right Section -->
+                <div class="col-md-2 text-center text-md-start">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="social-icons d-flex justify-content-center justify-content-md-start">
+                        <a target="_blank" href="https://www.facebook.com/people/Dr-Praful-Kilaru/100084851658438/"><i class="fa-brands fa-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/DrPraful11"><i class="fa-brands fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/dr_praful_official/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+    <div class="py-3 text-center copyrights" style="background-color: #000;">
+        <p class="text-white">Designed by <a target="_blank"  href="https://snaptics.agency/">Snaptics</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- time line section ends here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
