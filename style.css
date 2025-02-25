@@ -583,6 +583,17 @@ footer h5 {
     text-decoration: none;
     color: #fff;
 }
+.hero-section {
+    background: url(./images/servicebg.avif) center/cover no-repeat;
+    color: rgb(1, 1, 1);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
 @media (max-width: 768px) {
     .ComplexFractures h4 {
         font-size: 22px !important;
