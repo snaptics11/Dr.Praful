@@ -50,7 +50,7 @@ body {
 }
 .HeroSection_parent {
     position: relative;
-    background-image: url(/images/Artboard-36.png);
+    background-image: url(./images/Artboard-36.png);
     background-position: center center;
     background-size: cover;
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
@@ -203,7 +203,7 @@ p{
     padding-top: 25px;
 }
 .specialisationParent{
-    background-image: url(/images/specialisation_bg.png);
+    background-image: url(./images/specialisation_bg.png);
 }
 .specialisationParent .row{
     width: 97%;
@@ -502,7 +502,7 @@ p{
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
     color: white;
     padding: 90px 0;
-    background-image: url(/images/specialisation_bg.png);
+    background-image: url(./images/specialisation_bg.png);
 }
 .footer a {
     color: white;
