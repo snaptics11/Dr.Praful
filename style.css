@@ -584,6 +584,13 @@ footer h5 {
     color: #fff;
 }
 @media (max-width: 768px) {
+    .ComplexFractures h4 {
+        font-size: 22px !important;
+        margin-block: 10px;
+    }
+    .stats-card p{
+        text-align: center !important;
+    }
     .hero-section {
         background: url(./images/servicebg.avif) center/cover no-repeat;
     }
@@ -700,8 +707,16 @@ footer h5 {
         padding: 20px;
     }
     .footer {
-        padding: 50px 0 35px 0;
+        padding: 50px 0 35px 10px;
     }
+    .contact-form h3, .contact-info h3 {
+        font-size: 24px !important;
+    }
+    .contact-info p {
+        font-size: 16px !important;
+    }
+    
+    
     
     
 }
