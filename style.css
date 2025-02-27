@@ -169,9 +169,11 @@ p{
     width: 150px;
     margin-bottom: 25px;
 }
-.serviceCard{
+.serviceCard {
+    min-height: 275px;
     padding: 20px;
     text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(39.99999999999998, 71.00000000000001, 197.00000000000006, 0.2);
 }
 .serviceSectionParent{
     padding-block: 80px;
@@ -595,6 +597,12 @@ footer h5 {
     font-weight: bold;
 }
 @media (max-width: 768px) {
+    .serviceSectionParent .col-md-3 {
+        margin-bottom: 20px;
+    }
+    .serviceCard {
+        min-height: fit-content;
+    }
     .ComplexFractures h4 {
         font-size: 22px !important;
         margin-block: 10px;
@@ -732,6 +740,9 @@ footer h5 {
     
 }
 @media screen and (max-width:575px){
+    .HeroSection_parent {
+        background-size: 100%;
+    }
     .custom-card {
         padding: 20px;
         min-height: fit-content;
@@ -771,6 +782,7 @@ footer h5 {
 }
 .serviceSectionParent h2 {
     font-size: 32px;
+    padding-bottom: 35px !important;
 }
 .AboutSectionParent {
     padding-block: 10px;
