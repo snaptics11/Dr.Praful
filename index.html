@@ -95,25 +95,26 @@
                     <div class="col-md-5">
                         <div class="card shadow-sm">
                             <!-- <h4 class="mb-3">Book an Appointment</h4> -->
-                            <form>
+                            <form action="sendmail.php" method="POST">
                                 <div class="mb-3">
                                     <label class="mb-2" for="name">Name*</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="name" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="mb-2" for="Email">Email*</label>
-                                    <input type="email" class="form-control" required>
+                                    <label class="mb-2" for="email">Email*</label>
+                                    <input type="email" name="email" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="mb-2" for="mobile">Mobile*</label>
-                                    <input type="tel" class="form-control" required>
+                                    <input type="tel" name="mobile" class="form-control" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="mb-2" for="message">Your message (optional)</label><br>
-                                    <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+                                    <textarea name="message" rows="3" placeholder="Your Message"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
                             </form>
+                            
                         </div>
                     </div>
                 </div>
@@ -478,20 +479,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="sendmail.php" method="POST">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Mobile Number" required>
+                            <input type="text" name="name" class="form-control" placeholder="Name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="text" name="mobile" class="form-control" placeholder="Mobile Number" required>
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        <div class="mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>
+                        <button type="submit" class="w-100 submitButton">Submit</button>
                     </form>
+                    
                 </div>
             </div>
         </div>
@@ -542,18 +542,19 @@
                     <div class="col-md-5 mb-4 mb-md-0">
                         <div class="p-4 shadow rounded bg-white ">
                             <h4 class="text-center mb-5"><b>Online Consultation</b> </h4>
-                            <form>
+                            <form action="sendmail.php" method="POST">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Name" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Mobile Number" required>
+                                    <input type="text" name="mobile" class="form-control" placeholder="Mobile Number" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Email" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
                                 </div>
                                 <button type="submit" class="w-100 submitButton">Submit</button>
                             </form>
+                            
                         </div>
                     </div>
 
